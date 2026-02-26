@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sedrah.ai slide deck: emotional journey analysis across reviews, literature, and multimodal AI.">
+  <title>Sedrah.ai Deck | Emotional Journey Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f3f0e8;
+      --ink: #172420;
+      --muted: #5d6a64;
+      --brand: #0f6b5a;
+      --brand-strong: #0a4e42;
+      --accent: #be8a2f;
+      --surface: #ffffff;
+      --line: #d8d2c6;
+      --shadow-soft: 0 20px 50px rgba(23, 36, 32, 0.08);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Manrope", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(900px 450px at 100% -10%, rgba(190, 138, 47, 0.14), transparent 70%),
+        radial-gradient(700px 420px at -8% 10%, rgba(15, 107, 90, 0.12), transparent 70%),
+        var(--bg);
+      line-height: 1.6;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(10px);
+      background: rgba(243, 240, 232, 0.9);
+      border-bottom: 1px solid rgba(216, 210, 198, 0.8);
+    }
+
+    .container {
+      width: min(1120px, 92vw);
+      margin: 0 auto;
+    }
+
+    .topbar-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding: 8px 0;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--ink);
+      font-weight: 800;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid rgba(216, 210, 198, 0.9);
+      box-shadow: 0 4px 10px rgba(23, 36, 32, 0.12);
+    }
+
+    .top-links {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      text-decoration: none;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      padding: 10px 16px;
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid rgba(15, 107, 90, 0.2);
+      background: rgba(15, 107, 90, 0.1);
+      color: var(--brand-strong);
+    }
+
+    .deck {
+      padding: 26px 0 60px;
+      display: grid;
+      gap: 20px;
+    }
+
+    .slide {
+      min-height: min(78vh, 760px);
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow-soft);
+      padding: clamp(20px, 3.5vw, 40px);
+      display: grid;
+      gap: 14px;
+      align-content: start;
+      scroll-margin-top: 88px;
+    }
+
+    .slide-tag {
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--brand);
+    }
+
+    h1, h2 {
+      font-family: "Fraunces", serif;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+    }
+
+    h1 { font-size: clamp(1.9rem, 5vw, 3.2rem); }
+    h2 { font-size: clamp(1.5rem, 3.4vw, 2.2rem); margin-bottom: 6px; }
+
+    p { color: #36443f; }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 16px;
+      align-items: stretch;
+    }
+
+    .note {
+      background: #f8f5ed;
+      border: 1px solid #e6dfd2;
+      border-left: 4px solid var(--accent);
+      border-radius: 12px;
+      padding: 12px;
+      color: #304039;
+      font-size: 0.95rem;
+    }
+
+    ul {
+      padding-left: 18px;
+      color: #36443f;
+    }
+
+    .media {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid #e5ddcf;
+      background: #f9f7f1;
+    }
+
+    .media img {
+      width: 100%;
+      height: 100%;
+      max-height: 500px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .media::after {
+      content: "Copyright preserved to Sedrah.ai";
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #fff;
+      background: rgba(10, 36, 31, 0.72);
+      padding: 5px 8px;
+      border-radius: 999px;
+      pointer-events: none;
+    }
+
+    .kpis {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .kpi {
+      background: #f8f5ed;
+      border: 1px solid #e7dfd3;
+      border-radius: 12px;
+      padding: 12px;
+      text-align: center;
+    }
+
+    .kpi strong {
+      display: block;
+      color: var(--brand-strong);
+      font-size: 1.3rem;
+      line-height: 1.2;
+    }
+
+    .kpi span {
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .deck-nav {
+      position: fixed;
+      right: 14px;
+      bottom: 14px;
+      z-index: 30;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .deck-nav a {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      text-decoration: none;
+      display: grid;
+      place-items: center;
+      background: rgba(10, 78, 66, 0.9);
+      color: #fff;
+      font-weight: 800;
+      box-shadow: 0 6px 16px rgba(10, 78, 66, 0.28);
+    }
+
+    @media (max-width: 900px) {
+      .grid-2 { grid-template-columns: 1fr; }
+      .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .slide { min-height: auto; }
+    }
+
+    @media (max-width: 560px) {
+      .kpis { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="index.html" class="brand">
+        <img src="img/sedra_ai_logo.jpg" alt="Sedrah.ai logo" class="brand-mark">
+        Sedrah.ai Deck
+      </a>
+      <div class="top-links">
+        <a href="index.html" class="btn">Home</a>
+        <a href="blogs1.html" class="btn">Blog</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container deck">
+    <section class="slide" id="s1">
+      <p class="slide-tag">Slide 01</p>
+      <h1>Visualizing Emotional Journeys</h1>
+      <p>Deck summary of Sedrah.ai research on sentiment spirals and multimodal emotion analysis across customer reviews, literary narratives, and video signals.</p>
+      <div class="kpis">
+        <div class="kpi"><strong>3</strong><span>Primary Domains</span></div>
+        <div class="kpi"><strong>7+</strong><span>Visual Outputs</span></div>
+        <div class="kpi"><strong>GPU</strong><span>Accelerated NLP</span></div>
+        <div class="kpi"><strong>0-1</strong><span>Signal Scale</span></div>
+      </div>
+      <div class="media"><img src="img/sedra_ai.png" alt="Sedrah AI visualization"></div>
+    </section>
+
+    <section class="slide" id="s2">
+      <p class="slide-tag">Slide 02</p>
+      <h2>Amazon Review Sentiment</h2>
+      <div class="grid-2">
+        <div>
+          <p>Chronological sentiment spirals reveal how customer perception changes from launch to current periods.</p>
+          <ul>
+            <li>Color states map positive, neutral, and negative trends over time.</li>
+            <li>Emotion classifier output supports a mostly positive and neutral landscape.</li>
+            <li>Useful for product health monitoring and release impact tracking.</li>
+          </ul>
+          <div class="note">Interpretation: high neutral/positive concentration often indicates stable product expectations and reduced volatility.</div>
+        </div>
+        <div class="media"><img src="img/kaggle_sprial_reviews.png" alt="Amazon sentiment spiral"></div>
+      </div>
+    </section>
+
+    <section class="slide" id="s3">
+      <p class="slide-tag">Slide 03</p>
+      <h2>Review Emotion Classifier Output</h2>
+      <p>Hugging Face models add category-level emotional detail beyond simple rating polarity.</p>
+      <div class="media"><img src="img/kaggle_huggingface.png" alt="Hugging Face emotional analysis output"></div>
+    </section>
+
+    <section class="slide" id="s4">
+      <p class="slide-tag">Slide 04</p>
+      <h2>Literary Analysis: Frankenstein</h2>
+      <div class="grid-2">
+        <div>
+          <p>Fine-grained emotion models expose darker narrative phases with clearer emotional transitions than baseline sentiment tools.</p>
+          <ul>
+            <li>Dominant sadness and fear intervals in core chapters.</li>
+            <li>Sparse positive peaks indicate short relief periods.</li>
+            <li>Stronger signal fidelity for thematic interpretation.</li>
+          </ul>
+        </div>
+        <div class="media"><img src="img/frankstien.png" alt="Frankenstein emotion spiral"></div>
+      </div>
+    </section>
+
+    <section class="slide" id="s5">
+      <p class="slide-tag">Slide 05</p>
+      <h2>Multimodal Fusion</h2>
+      <div class="grid-2">
+        <div>
+          <p>Combining speech and visual emotion streams yields a more robust timeline than single-modality inference.</p>
+          <ul>
+            <li>Reduces false spikes from isolated channels.</li>
+            <li>Improves confidence in trend-level emotion shifts.</li>
+            <li>Supports operational use in research and teaching products.</li>
+          </ul>
+          <div class="note">Fused trajectories are better suited for decision support, where consistency matters more than one-off peaks.</div>
+        </div>
+        <div class="media"><img src="img/Quraan AI.png" alt="Multimodal analysis concept"></div>
+      </div>
+    </section>
+
+    <section class="slide" id="s6">
+      <p class="slide-tag">Slide 06</p>
+      <h2>Sedrah.ai Platform Challenge Focus</h2>
+      <p>The platform is designed for context-preserving emotional intelligence in sacred and historical language, where meaning depends on sequence, structure, and interpretation depth.</p>
+      <div class="media"><img src="img/Challenges.png" alt="Sedrah AI challenge visualization"></div>
+    </section>
+
+    <section class="slide" id="s7">
+      <p class="slide-tag">Slide 07</p>
+      <h2>Closing and Next Actions</h2>
+      <ul>
+        <li>Deploy spiral dashboards for selected corpora.</li>
+        <li>Benchmark multimodal fusion against baseline sentiment pipelines.</li>
+        <li>Prepare enterprise-facing demos for research and education partners.</li>
+      </ul>
+      <div class="note">Contact: admin@sedrah.ai</div>
+    </section>
+  </main>
+
+  <nav class="deck-nav" aria-label="Slide navigation">
+    <a href="#s1" title="Slide 1">1</a>
+    <a href="#s2" title="Slide 2">2</a>
+    <a href="#s3" title="Slide 3">3</a>
+    <a href="#s4" title="Slide 4">4</a>
+    <a href="#s5" title="Slide 5">5</a>
+    <a href="#s6" title="Slide 6">6</a>
+    <a href="#s7" title="Slide 7">7</a>
+  </nav>
+</body>
+</html>

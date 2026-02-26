@@ -375,6 +375,57 @@
       font-weight: 800;
     }
 
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .about-list {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .about-list li {
+      background: #f8f5ed;
+      border: 1px solid #e9e2d7;
+      border-radius: 12px;
+      padding: 10px 12px;
+      color: #34423d;
+      font-size: 0.95rem;
+    }
+
+    .about-kpis {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .about-kpi {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      text-align: center;
+      padding: 14px 10px;
+    }
+
+    .about-kpi strong {
+      display: block;
+      color: var(--brand-strong);
+      font-size: 1.35rem;
+      line-height: 1.2;
+    }
+
+    .about-kpi span {
+      color: var(--muted);
+      font-size: 0.83rem;
+      font-weight: 700;
+    }
+
     .story {
       display: grid;
       grid-template-columns: 1.05fr 1fr;
@@ -513,6 +564,7 @@
 
     @media (max-width: 980px) {
       .hero-grid,
+      .about-grid,
       .story,
       .cta-wrap {
         grid-template-columns: 1fr;
@@ -565,9 +617,11 @@
       </a>
       <ul class="nav-links">
         <li><a href="#capabilities">Capabilities</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="#platform">Platform</a></li>
         <li><a href="#mission">Mission</a></li>
         <li><a href="blogs1.html">Blog</a></li>
+        <li><a href="deck.html">Deck</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <a class="btn btn-ghost" href="mailto:ragaad@sedrah.ai">Book a Call</a>
@@ -646,6 +700,45 @@
       </div>
     </section>
 
+    <section id="about">
+      <div class="container about-grid">
+        <article class="panel">
+          <h3>About The Founder</h3>
+          <p>Sedrah.ai is led by Dr.-Ing. Ragaad Altarawneh, a performance visualization architect and AI systems scientist with deep experience translating complex distributed-system data into practical engineering insight.</p>
+          <ul class="about-list">
+            <li><strong>Intel Labs:</strong> Led visual data system architecture and delivered 10x optimization impact in critical workloads.</li>
+            <li><strong>Research and Teaching:</strong> 30+ peer-reviewed publications and advanced instruction in AI, data visualization, and ethics.</li>
+            <li><strong>Current Focus:</strong> Building context-aware emotional intelligence systems for sacred and historical language analysis.</li>
+          </ul>
+          <div style="margin-top: 16px;">
+            <a class="btn btn-primary" href="resume.html">View Full Resume</a>
+          </div>
+        </article>
+        <article class="panel">
+          <h3>Profile Snapshot</h3>
+          <p>Professional background from the resume, structured for quick review and partner due diligence.</p>
+          <div class="about-kpis">
+            <div class="about-kpi">
+              <strong>10+ yrs</strong>
+              <span>Systems & AI Experience</span>
+            </div>
+            <div class="about-kpi">
+              <strong>30+</strong>
+              <span>Peer-Reviewed Papers</span>
+            </div>
+            <div class="about-kpi">
+              <strong>PhD</strong>
+              <span>Computer Engineering</span>
+            </div>
+            <div class="about-kpi">
+              <strong>10x</strong>
+              <span>Efficiency Improvement</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <section id="platform">
       <div class="container story">
         <article class="panel">
@@ -692,6 +785,7 @@
           </div>
           <div style="display: flex; gap: 10px; flex-wrap: wrap;">
             <a class="btn" href="blogs1.html">Read the Blog</a>
+            <a class="btn" href="deck.html">Open Deck</a>
             <a class="btn" href="mailto:admin@sedrah.ai?subject=Sedrah.ai%20Partnership%20Inquiry">Contact Sedrah.ai</a>
           </div>
         </div>
@@ -702,7 +796,7 @@
   <footer>
     <div class="container footer-row">
       <p><strong>Sedrah.ai</strong> • Emotional Intelligence for Sacred and Historical Language</p>
-      <p>© 2026 Sedrah.ai • <a href="blogs1.html" style="color: inherit; font-weight: 700;">Blog</a> • <a href="mailto:ragaad@sedrah.ai" style="color: inherit; font-weight: 700;">admin@sedrah.ai</a></p>
+      <p>© 2026 Sedrah.ai • <a href="blogs1.html" style="color: inherit; font-weight: 700;">Blog</a> • <a href="deck.html" style="color: inherit; font-weight: 700;">Deck</a> • <a href="mailto:ragaad@sedrah.ai" style="color: inherit; font-weight: 700;">admin@sedrah.ai</a></p>
     </div>
   </footer>
 </body>

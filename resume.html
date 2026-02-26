@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Resume of Dr.-Ing. Ragaad Altarawneh - Performance Visualization Architect and Senior AI Systems Scientist.">
+  <title>Resume | Dr.-Ing. Ragaad Altarawneh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f3f0e8;
+      --ink: #172420;
+      --muted: #5d6a64;
+      --brand: #0f6b5a;
+      --brand-strong: #0a4e42;
+      --accent: #be8a2f;
+      --surface: #ffffff;
+      --line: #d8d2c6;
+      --shadow-soft: 0 20px 50px rgba(23, 36, 32, 0.08);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Manrope", sans-serif;
+      color: var(--ink);
+      line-height: 1.65;
+      background:
+        radial-gradient(900px 450px at 100% -10%, rgba(190, 138, 47, 0.14), transparent 70%),
+        radial-gradient(700px 420px at -8% 10%, rgba(15, 107, 90, 0.12), transparent 70%),
+        var(--bg);
+    }
+
+    .container {
+      width: min(1100px, 92vw);
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+      background: rgba(243, 240, 232, 0.9);
+      border-bottom: 1px solid rgba(216, 210, 198, 0.75);
+    }
+
+    .topbar-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding: 8px 0;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--ink);
+      font-weight: 800;
+      letter-spacing: 0.01em;
+    }
+
+    .brand img {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid rgba(216, 210, 198, 0.9);
+      box-shadow: 0 4px 10px rgba(23, 36, 32, 0.12);
+    }
+
+    .nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      text-decoration: none;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 9px 14px;
+      border: 1px solid rgba(15, 107, 90, 0.22);
+      background: rgba(15, 107, 90, 0.1);
+      color: var(--brand-strong);
+    }
+
+    main {
+      padding: 34px 0 60px;
+    }
+
+    .resume {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow-soft);
+      padding: clamp(20px, 3.2vw, 40px);
+    }
+
+    .identity {
+      margin-bottom: 14px;
+      border-bottom: 1px solid #e6dfd2;
+      padding-bottom: 16px;
+    }
+
+    .identity h1 {
+      font-family: "Fraunces", serif;
+      font-size: clamp(1.7rem, 4vw, 2.6rem);
+      line-height: 1.2;
+      margin-bottom: 6px;
+    }
+
+    .role {
+      font-weight: 700;
+      color: var(--brand-strong);
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 0.96rem;
+      margin-top: 4px;
+    }
+
+    section {
+      margin-top: 22px;
+    }
+
+    h2 {
+      font-family: "Fraunces", serif;
+      font-size: 1.35rem;
+      margin-bottom: 10px;
+      color: #1f3731;
+    }
+
+    h3 {
+      font-size: 1.02rem;
+      margin-bottom: 4px;
+      color: #1c312c;
+    }
+
+    p { color: #33423d; margin-bottom: 8px; }
+
+    ul {
+      padding-left: 18px;
+      display: grid;
+      gap: 6px;
+      color: #33423d;
+    }
+
+    .entry {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px dashed #e6dfd2;
+    }
+
+    .entry:first-of-type {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
+
+    .period {
+      color: var(--muted);
+      font-size: 0.92rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    @media (max-width: 720px) {
+      .topbar-inner { min-height: 64px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="index.html" class="brand">
+        <img src="img/sedra_ai_logo.jpg" alt="Sedrah.ai logo">
+        Sedrah.ai Resume
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="blogs1.html">Blog</a>
+        <a href="deck.html">Deck</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="container resume">
+      <header class="identity">
+        <h1>Dr.-Ing. Ragaad Altarawneh</h1>
+        <p class="role">Performance Visualization Architect | Senior AI Systems Scientist</p>
+        <p class="meta">Fremont, CA | ragaad@sedrah.ai | (971) 770-8525</p>
+      </header>
+
+      <section>
+        <h2>Professional Summary</h2>
+        <p>Senior Systems Architect and Data Storyteller with 10+ years of experience transforming complex AI distributed system performance data into actionable visual insights. Expert in high-performance visualization platforms for large-scale GPU/CPU clusters, distributed ML workloads, and software-hardware interfaces. Proven track record at Intel Labs architecting visual data systems that improved workload efficiency by 10x.</p>
+      </section>
+
+      <section>
+        <h2>Core Expertise</h2>
+        <ul>
+          <li><strong>Data Storytelling & Visualization:</strong> Interactive dashboards, high-dimensional data mapping, visual analytics for deep learning.</li>
+          <li><strong>Specialized Data Visualization:</strong> Interactive visual support, high-dimensional mapping, perception-based UI/UX.</li>
+          <li><strong>Performance Engineering:</strong> CPU utilization profiling, distributed bottleneck analysis, low-latency inference optimization.</li>
+          <li><strong>Full-Stack Development:</strong> Python, C++, SQL, Bash, Docker, Kafka, AWS.</li>
+          <li><strong>System Architecture:</strong> Cloud-scale server frameworks, automated analytics pipelines, API gateway design.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Professional Experience</h2>
+
+        <div class="entry">
+          <h3>Sedrah AI Solutions | Founder & CEO</h3>
+          <p class="period">2024 - Present</p>
+          <ul>
+            <li>Architected a voice-to-verse multimodal exploration engine with custom visual interfaces for semantic audio search patterns.</li>
+            <li>Built interactive R&D pipelines for multimodal AI agents, translating high-dimensional profiling data into intuitive dashboards.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <h3>Intel Labs | Systems Research Scientist / Architect</h3>
+          <p class="period">2017 - 2024</p>
+          <ul>
+            <li>Led design of VDMS, a distributed visual data management system, producing optimization strategies with 10x efficiency gains.</li>
+            <li>Collaborated with Stanford and CMU on Scanner and SAF, building automated pipelines for cloud-scale performance visualization.</li>
+            <li>Engineered UI/UX frameworks for monitoring multimodal AI pipelines and identifying real-time inference bottlenecks.</li>
+            <li>Published 30+ peer-reviewed papers and translated complex numeric performance data into decision-ready narratives.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <h3>San Francisco State University | Lecturer & Research Supervisor</h3>
+          <p class="period">2017 - 2024</p>
+          <ul>
+            <li>Developed and taught advanced curricula in Data Visualization and AI Ethics for technical and interdisciplinary audiences.</li>
+            <li>Directed graduate theses on LLM integration and ML analytics with visualization standards for large model systems.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <h3>Mutah University | Assistant Professor</h3>
+          <p class="period">2015 - 2021</p>
+          <ul>
+            <li>Taught Computer Graphics and AI with emphasis on visual storytelling of software-hardware performance behavior.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Selected Technical Projects</h2>
+        <ul>
+          <li><strong>Scanner (Intel Labs + Stanford):</strong> Large-scale video analytics framework focused on high-throughput processing and visual performance tracking.</li>
+          <li><strong>SAF (Intel Labs + CMU):</strong> Edge-cloud streaming system focused on visualizing low-latency inference bottlenecks in distributed environments.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <ul>
+          <li><strong>Ph.D. in Computer Engineering</strong> | RPTU Kaiserslautern-Landau, Germany.
+            Thesis: <em>Interactive Visual Support for Understanding Embedded Systems</em>.</li>
+          <li><strong>M.S. in Computer Science</strong> | Jordan University.</li>
+          <li><strong>B.S. in Computer Science</strong> | Mutah University.</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+</body>
+</html>
