@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sedrah.ai Script Intelligence: preserving Arabic handwriting geometry in real time.">
+  <title>Sedrah.ai | Script Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f3f0e8;
+      --ink: #172420;
+      --muted: #5d6a64;
+      --brand: #0f6b5a;
+      --brand-strong: #0a4e42;
+      --surface: #ffffff;
+      --line: #d8d2c6;
+      --shadow-soft: 0 20px 50px rgba(23, 36, 32, 0.08);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Manrope", sans-serif;
+      color: var(--ink);
+      line-height: 1.65;
+      background:
+        radial-gradient(900px 450px at 100% -10%, rgba(190, 138, 47, 0.14), transparent 70%),
+        radial-gradient(700px 420px at -8% 10%, rgba(15, 107, 90, 0.12), transparent 70%),
+        var(--bg);
+    }
+
+    .container {
+      width: min(1120px, 92vw);
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+      background: rgba(243, 240, 232, 0.9);
+      border-bottom: 1px solid rgba(216, 210, 198, 0.75);
+    }
+
+    .topbar-inner {
+      min-height: 72px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding: 8px 0;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--ink);
+      font-weight: 800;
+    }
+
+    .brand img {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid rgba(216, 210, 198, 0.9);
+      box-shadow: 0 4px 10px rgba(23, 36, 32, 0.12);
+    }
+
+    .nav { display: flex; gap: 10px; flex-wrap: wrap; }
+
+    .nav a {
+      text-decoration: none;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 9px 14px;
+      border: 1px solid rgba(15, 107, 90, 0.22);
+      background: rgba(15, 107, 90, 0.1);
+      color: var(--brand-strong);
+    }
+
+    main { padding: 36px 0 70px; }
+
+    .hero,
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .hero {
+      padding: clamp(22px, 4vw, 42px);
+      margin-bottom: 16px;
+    }
+
+    .eyebrow {
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--brand);
+      margin-bottom: 10px;
+    }
+
+    h1, h2 {
+      font-family: "Fraunces", serif;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+    }
+
+    h1 { font-size: clamp(1.9rem, 5vw, 3rem); margin-bottom: 10px; }
+    h2 { font-size: clamp(1.35rem, 3.4vw, 2rem); margin-bottom: 10px; }
+
+    .hero p,
+    .panel p { color: #34423d; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .panel {
+      padding: clamp(18px, 2.8vw, 28px);
+    }
+
+    ul {
+      margin-top: 8px;
+      padding-left: 18px;
+      display: grid;
+      gap: 6px;
+      color: #33423d;
+    }
+
+    .quote {
+      margin-top: 16px;
+      background: #f8f5ed;
+      border: 1px solid #e8e2d7;
+      border-left: 4px solid var(--brand);
+      border-radius: 12px;
+      padding: 12px;
+      font-weight: 700;
+      color: #223732;
+    }
+
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="index.html" class="brand">
+        <img src="img/sedra_ai_logo.jpg" alt="Sedrah.ai logo">
+        Sedrah.ai Script Intelligence
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="blogs1.html">Blog</a>
+        <a href="deck.html">Deck</a>
+        <a href="resume.html">Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">From Text Intelligence to Script Intelligence</p>
+      <h1>Research-Grade AI for Preserving Arabic Handwriting</h1>
+      <p>Sedrah.ai is expanding from heritage text intelligence to real-time script intelligence, building AI systems that preserve not only what Arabic means, but how it is written.</p>
+      <p class="quote">Language is meaning. Script is embodiment. Sedrah.ai preserves both.</p>
+    </section>
+
+    <div class="grid">
+      <section class="panel">
+        <h2>Heritage Language Intelligence</h2>
+        <p>Our work started in advanced NLP with GPU-accelerated pipelines, context-preserving language modeling, and layered emotional transition detection for sacred and historical texts.</p>
+        <ul>
+          <li>Precision analysis for heritage corpora</li>
+          <li>Nuance-preserving contextual modeling</li>
+          <li>Structural integrity over naive classification</li>
+        </ul>
+      </section>
+
+      <section class="panel">
+        <h2>The Next Frontier: Script Intelligence</h2>
+        <p>We are extending this approach to computational handwriting intelligence that preserves canonical Arabic script geometry in live writing environments.</p>
+        <ul>
+          <li>Naskh proportional geometry</li>
+          <li>Baseline and letter-form discipline</li>
+          <li>Diacritic anchoring and stroke sequencing</li>
+        </ul>
+      </section>
+
+      <section class="panel">
+        <h2>Core Technical System</h2>
+        <ul>
+          <li>Real-time Apple Pencil stroke capture (x, y, t, pressure, tilt)</li>
+          <li>Canonical Naskh geometric model with tolerance bands</li>
+          <li>Stroke alignment and deviation detection</li>
+          <li>Immediate adaptive feedback and correction hints</li>
+          <li>Offline-first architecture with optional cloud analytics</li>
+        </ul>
+      </section>
+
+      <section class="panel">
+        <h2>Educational and Strategic Impact</h2>
+        <ul>
+          <li>Guided letter practice, word formation, and diacritic mastery</li>
+          <li>Classroom dashboards and error-pattern analytics</li>
+          <li>Preservation of script standards and cultural continuity</li>
+          <li>Cross-script extension potential (Urdu, Persian variants)</li>
+          <li>Alignment with GCC education modernization and language preservation initiatives</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
